@@ -6,27 +6,27 @@ const Navbar = () => {
 
   const [menu, setMenu] = useState("menu");
   return (
-    <div className="navbar flex justify-between items-center py-5">
+    <div className="navbar">
 
 
-      <img src={assets.logo} alt="" className="w-40" />
+      <img src={assets.logo} alt="" className="logo" />
 
-      <ul className="flex gap-8 list-none text-[18px] text-[#49557e]">
-        <li onClick={() => setMenu("home")} className={`cursor-pointer ${menu === "home" ? "active" : " "}`}>Home</li>
-        <li onClick={() => setMenu("menu")} className={`cursor-pointer ${menu === "menu" ? "active" : " "}`}>Menu</li>
-        <li onClick={() => setMenu("mobile-app")} className={`cursor-pointer ${menu === "mobile-app" ? "active" : " "}`}>mobile-app</li>
-        <li onClick={() => setMenu("contact-us")} className={`cursor-pointer ${menu === "contact-us" ? "active" : " "}`}>Contact Us</li>
+      <ul className="navbar-menu">
+        <li onClick={() => setMenu("home")} className={` ${menu === "home" ? "active" : " "}`}>Home</li>
+        <li onClick={() => setMenu("menu")} className={` ${menu === "menu" ? "active" : " "}`}>Menu</li>
+        <li onClick={() => setMenu("mobile-app")} className={` ${menu === "mobile-app" ? "active" : " "}`}>mobile-app</li>
+        <li onClick={() => setMenu("contact-us")} className={` ${menu === "contact-us" ? "active" : " "}`}>Contact Us</li>
       </ul>
 
-      <div className="flex items-center gap-8">
+      <div className="navbar-right">
         <img src={assets.search_icon} alt="" className="w-5 cursor-pointer" />
 
-        <div className="navbar-search-icon relative">
-          <img src={assets.basket_icon} alt="" className="w-5 cursor-pointer" />
-          <div className="dot absolute bg-red-500 min-w-2 min-h-2 rounded-md -top-2 -right-2"></div>
+        <div className="navbar-search-icon">
+          <img src={assets.basket_icon} alt="" />
+          <div className="dot "></div>
         </div>
 
-        <button className="border border-red-500 px-6 py-2 rounded-full bg-transparent text-[16px] text-[#49557e] transition duration-300 hover:bg-[#fff4f2]">
+        <button>
           sign in
         </button>
       </div>
